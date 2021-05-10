@@ -10,11 +10,23 @@
         </li>
 
         <li class="nav-item" *ngIf="usuario?.tipo === 2">
-          <a class="nav-link" href="#">Area do Aluno</a>
+          <a class="nav-link active" aria-current="page"  href="#">Area do Aluno</a>
+        </li>
+        
+        <li class="nav-item">
+          <a [routerLink] = "[ 'listar-alunos' ]" class="nav-link active" aria-current="page">Listar alunos</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Perfil</a>
+          <a [routerLink] = "[ 'listar-professores' ]" class="nav-link active" aria-current="page">Listar professores</a>
+        </li>
+
+        <li class="nav-item">
+          <a [routerLink] = "[ 'listar-cursos' ]" class="nav-link active" aria-current="page">Listar cursos</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  href="#">Perfil</a>
         </li>
 
         <li class="nav-item"> <!-- tentar limpar application -->

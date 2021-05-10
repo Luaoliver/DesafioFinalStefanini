@@ -12,12 +12,15 @@ const URL = 'http://localhost:3000/stefanini/professor';
 export class ProfessorService {
   constructor(private httpClient: HttpClient) {}
 
-  // #pegabandeira
-  listar(filtro: Partial<Professor>): Observable<Professor[]> {
-    return this.httpClient.get<Professor[]>(URL, {
-      params: filtro,
-    });
+  listar(){
+    return ['Oi']
   }
+  // #pegabandeira
+  //listar(filtro: Partial<Professor>): Observable<Professor[]> {
+  //  return this.httpClient.get<Professor[]>(URL, {
+  //    params: filtro,
+  //  });
+ // }
 
   obter() {}
 

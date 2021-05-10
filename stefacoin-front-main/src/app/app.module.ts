@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -19,6 +20,10 @@ import { PaginaNaoEncontradaComponent } from './pages/public/pagina-nao-encontra
 import { CadastrarProfessorComponent } from './cadastrar-professor/cadastrar-professor.component';
 import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.component';
 import { AreaDoProfessorComponent } from './area-do-professor/area-do-professor.component';
+import { AlunoService } from './services/aluno.service';
+import { ListarAlunosComponent } from './listar-alunos/listar-alunos.component';
+import { ListarProfessoresComponent } from './listar-professores/listar-professores.component';
+import { ListarCursosComponent } from './listar-cursos/listar-cursos.component'
 
 export function tokenGetter() {
   return localStorage.getItem('jwttoken');
@@ -36,6 +41,9 @@ export function tokenGetter() {
     CadastrarProfessorComponent,
     CadastrarAlunoComponent,
     AreaDoProfessorComponent,
+    ListarAlunosComponent,
+    ListarProfessoresComponent,
+    ListarCursosComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,6 +68,7 @@ export function tokenGetter() {
       multi: true,
     },
     AuthGuardService,
+    AlunoService,
   ],
   bootstrap: [AppComponent],
 })
