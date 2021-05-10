@@ -1,29 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="showHeader()">
   <div class="container-fluid">
     <a class="navbar-brand" href="">Stefacoin</a>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
         <li class="nav-item" *ngIf="usuario?.tipo === 1">
-          <a class="nav-link active" aria-current="page" href="#">Area do Professor</a>
+          <a [routerLink] = "[ 'area-do-professor' ]" class="nav-link active" aria-current="page" >Area do Professor</a>
         </li>
+
         <li class="nav-item" *ngIf="usuario?.tipo === 2">
           <a class="nav-link" href="#">Area do Aluno</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Perfil</a>
+        </li>
+
+        <li class="nav-item"> <!-- tentar limpar application -->
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-danger">Sair</button>
+          </div>
+        </li>
+
       </ul>
     </div>
   </div>
 </nav>
-
-
-<div class="container-fluid" *ngIf="usuario?.tipo === 1">
-  <div class="d-grid gap-2">
-    <button class="btn btn-outline-primary" type="button">Visualizar meus cursos</button>
-  </div>
-  <div class="d-grid gap-2">
-    <button type="button" class="btn btn-danger">Sair</button>
-  </div>
-</div>
-
-<div *ngIf="usuario?.tipo === 2">
-  <p>hello world</p>
-</div>
