@@ -13,3 +13,17 @@
     </div>
   </div>
 </nav>
+
+
+<div class="container-fluid" *ngIf="usuario?.tipo === 1">
+  <div class="d-grid gap-2">
+    <button class="btn btn-outline-primary" type="button">Visualizar meus cursos</button>
+  </div>
+  <div class="d-grid gap-2">
+    <button type="button" class="btn btn-danger">Sair</button>
+  </div>
+</div>
+
+<div *ngIf="usuario?.tipo === 2">
+  <p>hello world</p>
+</div>
