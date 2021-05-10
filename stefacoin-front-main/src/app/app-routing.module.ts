@@ -5,6 +5,8 @@ import { HomeComponent } from './pages/private/home/home.component';
 import { CadastroComponent } from './pages/public/cadastro/cadastro.component';
 import { LoginComponent } from './pages/public/login/login.component';
 import { PaginaNaoEncontradaComponent } from './pages/public/pagina-nao-encontrada/pagina-nao-encontrada.component';
+import { CadastrarProfessorComponent } from './cadastrar-professor/cadastrar-professor.component';
+import { CadastrarAlunoComponent } from './cadastrar-aluno/cadastrar-aluno.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,14 @@ const routes: Routes = [
   {
     path: 'nova-conta',
     component: CadastroComponent,
+  },
+  {
+    path: 'nova-conta/professor',
+    component: CadastrarProfessorComponent,
+  },
+  {
+    path: 'nova-conta/aluno',
+    component: CadastrarAlunoComponent,
   },
   {
     path: 'login',
