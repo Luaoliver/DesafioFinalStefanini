@@ -14,6 +14,7 @@ export class ListarAlunosComponent implements OnInit {
 
   ngOnInit(): void {
 
+
     this.aluno = this.alunoService.listar()
     
   }

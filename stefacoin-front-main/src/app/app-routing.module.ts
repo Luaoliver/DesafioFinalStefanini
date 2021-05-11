@@ -13,6 +13,7 @@ import { ListarProfessoresComponent } from './listar-professores/listar-professo
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component'
 
 
+
 const routes: Routes = [
   {
     path: '',

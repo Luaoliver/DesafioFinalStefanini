@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http'; //responsavel por fazer consu
 })
 export class AlunoService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   listar() {
-    return ['Aluno Um', 'Aluno Dois']
+    return this.httpClient.get('http://localhost:3000/aluno')
   }
 }
