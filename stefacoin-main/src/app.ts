@@ -51,13 +51,10 @@ class App {
     this.app.use('/stefanini', AuthRouter);
   }
 
-  // #pegabandeira
+  // #pegabandeira corrigido
   private privateRoutes() {
     this.authMiddleware();
-    this.app.use('/stefanini', AlunoRouter);
-    this.app.use('/stefanini', AulaRouter);
-    this.app.use('/stefanini', CursoRouter);
-    this.app.use('/stefanini', ProfessorRouter);
+    this.app.use('/stefanini', AlunoRouter, AulaRouter, CursoRouter, ProfessorRouter);
   }
 
   private authMiddleware() {

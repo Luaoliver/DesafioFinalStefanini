@@ -1,7 +1,7 @@
 {
-  "ALUNO": [],
-  "CURSO": [],
-  "USUARIO": [
+  "aluno": [],
+  "curso": [],
+  "usuario": [
     {
       "nome": "Professor 1",
       "email": "prof1@email.com",
