@@ -14,7 +14,7 @@ export class ListarProfessoresComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.professor = this.professorService.listar()
+    //this.professor = this.professorService.listar()
   }
 
 }
